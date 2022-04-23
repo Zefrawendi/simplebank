@@ -1,0 +1,11 @@
+version: "1"
+packages:
+  - name: "db" # package name
+    path: "./db/sqlc" # 存放生成的go代码的目录
+    engine: "postgresql" # 数据库引擎
+    schema: "./db/migration" # 存放数据库表的目录
+    queries: "./db/query" # 存放sql语句的目录
+    emit_json_tags: true # 是否生成json tag
+    emit_prepared_queries: false # 是否生成预编译的sql语句
+    emit_interface: false # 是否生成接口
+    emit_exact_table_names: false # 生成的结构体名称是否为复数形式
